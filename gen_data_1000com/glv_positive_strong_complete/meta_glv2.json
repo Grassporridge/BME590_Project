@@ -1,0 +1,11 @@
+{
+  "SEED": 7,
+  "input_npy": "glv_positive_strong_complete/pos_strong_params_complete.npy",
+  "N_COMM": 1000,
+  "N_SPECIES": 25,
+  "r2_rule": "r2_i = alpha_i * r1_i; alpha_i ~ Uniform(0.25,0.75) for present species",
+  "A2_rule": "A2 = A1 \u2299 S; S lognormal(sigma=0.35) rescaled to median 1.0, clipped to [0.59,2.5] (can strengthen or weaken)",
+  "DIAG_MULTIPLIER": 1.1,
+  "OFFDIAG_MULTIPLIER": 1.0,
+  "PRESERVE_ZERO_ENTRIES": false
+}

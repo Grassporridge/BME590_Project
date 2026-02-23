@@ -1,0 +1,27 @@
+{
+  "SEED": 7,
+  "time": {
+    "t0": 0.0,
+    "tf": 20.0,
+    "n": 201
+  },
+  "target": {
+    "mean": 10.0,
+    "sd": 1.2,
+    "clip": [
+      7.0,
+      13.0
+    ]
+  },
+  "depletion_rule": "M(t)=M0-\u222b sum_i w_i x_i dt; switch when M hits 0",
+  "baseline_rule": "dashed line is GLV1-only simulated with same r1/A1/x0/solver",
+  "switch_rule": "solid line equals GLV1-only before switch; GLV2 after switch",
+  "solver": {
+    "method": "Radau",
+    "atol": 1e-08,
+    "rtol": 1e-06,
+    "X_CLAMP": 50.0
+  },
+  "glv1_npz": "glv_positive_strong_complete/params_glv1_standard.npz",
+  "glv2_npz": "glv_positive_strong_complete/params_glv2.npz"
+}
