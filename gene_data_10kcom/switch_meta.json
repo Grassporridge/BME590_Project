@@ -1,0 +1,53 @@
+{
+  "SEED": 45,
+  "time": {
+    "t0": 0.0,
+    "tf": 20.0,
+    "n": 21,
+    "grid": "0,1,2,...,20"
+  },
+  "target_switch_median": 10.0,
+  "shared_M0": 3.0504614665246166,
+  "shared_w_global": [
+    1.1986004557620973,
+    1.0134791466124955,
+    1.0781252138315256,
+    0.5940893083982621,
+    0.8462281470157682,
+    1.4358361309510859,
+    2.024899968609236,
+    1.298386994854337,
+    0.44285321318315335,
+    0.4409039353787176,
+    1.86826795895318,
+    1.0774328331335474,
+    1.1892481349010904,
+    0.8428860329089435,
+    1.0166636997315779,
+    1.0712927854340981,
+    0.8462371888112462,
+    0.9564833509431161,
+    1.3933032228437343,
+    0.3512781790364212,
+    0.9032720107326924,
+    0.6704874365191854,
+    1.0837444104652538,
+    0.6261201668041525,
+    0.7298800741850818
+  ],
+  "depletion_rule": "M(t)=M0_global-\u222b sum_i (w_global_i * mask_i) x_i dt; switch when M hits 0",
+  "baseline_rule": "dashed line is GLV1-only simulated with same r1/A1/x0/solver",
+  "switch_rule": "solid line equals GLV1-only before switch; GLV2 after switch",
+  "solver": {
+    "method": "Radau",
+    "atol": 1e-08,
+    "rtol": 1e-06,
+    "X_CLAMP": 50.0
+  },
+  "glv1_npz": "glv2/params_glv1_standard.npz",
+  "glv2_npz": "glv2/params_glv2.npz",
+  "filter_rule": "Removed communities with any species abundance > 3.0",
+  "n_communities_before_filter": 10000,
+  "n_communities_removed": 11,
+  "n_communities_after_filter": 9989
+}
